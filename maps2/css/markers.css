@@ -1,0 +1,112 @@
+body {
+  background-color: #fafafa;
+}
+
+.close-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: rgb(27, 27, 27);
+  border: none;
+  padding: 9px; /* Adjust padding for better icon alignment */
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1000;
+  display: flex; /* Ensure alignment for the icon */
+  justify-content: center;
+  align-items: center;
+}
+
+.close-btn:hover{
+  background-color: #3d3d3d;
+}
+
+.close-btn i {
+  color: #fff; /* Ensure the icon matches button text color */
+  font-size: 15px;
+}
+
+h1,
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  margin-top: 2%;
+  margin-left: 20px;
+}
+
+span{
+  color: rgb(6, 105, 84);
+  font-weight: bold;
+}
+
+p{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  padding: 3px;
+  margin: 2px;
+  padding-left: 30px;
+}
+
+.info i {
+  margin-right: 10px; /* Space between icon and text */
+  color: #333333; /* Optional: Adjust icon color */
+  font-size: 16px; /* Adjust icon size */
+}
+
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  margin-top: 2%;
+  margin-left: 20px;
+}
+
+h2{
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.col-sm-12,
+.col-lg-4,
+.col-lg-6 {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.card {
+  border-radius: 10px;
+  margin: 3%;
+  border: none;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 10px; /* Add padding for spacing */
+  transition: box-shadow 0.1s ease-in-out; /* Smooth shadow transition */
+}
+
+.card:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.header {
+  position: relative;
+  background-clip: border-box;
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-right: auto;
+}
+
+.title-row {
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space between title and icon */
+  align-items: center; /* Vertically align items */
+  margin-top: 5px; /* Add spacing */
+}
+
+.title-row img {
+  margin-left: auto; /* Push the image to the right */
+}
+
+img {
+  margin-left: 4%;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/markers.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <button class="close-btn" onclick="closeTab()">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+
+    <script>
+      function closeTab() {
+        window.close();
+      }
+    </script>
+
+    <iframe
+      id="tour-embeded"
+      name="CAA"
+      src="https://tour.panoee.net/iframe/67c03cc7631bd5625668639d"
+      frameborder="0"
+      width="100%"
+      height="550px"
+      scrolling="no"
+      allowvr="yes"
+      allow="vr; xr; accelerometer; gyroscope; autoplay;"
+      allowfullscreen="false"
+      webkitallowfullscreen="false"
+      mozallowfullscreen="false"
+      loading="eager"
+    ></iframe>
+    <script>
+      var pano_iframe_name = "tour-embeded";
+      window.addEventListener("devicemotion", function (e) {
+        var iframe = document.getElementById(pano_iframe_name);
+        if (iframe)
+          iframe.contentWindow.postMessage(
+            {
+              type: "devicemotion",
+              deviceMotionEvent: {
+                acceleration: {
+                  x: e.acceleration.x,
+                  y: e.acceleration.y,
+                  z: e.acceleration.z,
+                },
+                accelerationIncludingGravity: {
+                  x: e.accelerationIncludingGravity.x,
+                  y: e.accelerationIncludingGravity.y,
+                  z: e.accelerationIncludingGravity.z,
+                },
+                rotationRate: {
+                  alpha: e.rotationRate.alpha,
+                  beta: e.rotationRate.beta,
+                  gamma: e.rotationRate.gamma,
+                },
+                interval: e.interval,
+                timeStamp: e.timeStamp,
+              },
+            },
+            "*"
+          );
+      });
+    </script>
+
+    <div class="container-fluid mb-5">
+      <div class="col-lg-12">
+        <h1>College of Agriculture and Agri-Industries</h1>
+        <hr />
+        <p class="mb-3">
+          Below is a list of the rooms, facilities, and other key areas located
+          within this building, organized by floor for your convenience.
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-6">
+          <div class="card">
+            <div class="header"></div>
+            <div class="title-row">
+              <h4>First Floor</h4>
+              <img src="img/layer1.png" alt="Info" width="35" height="35" />
+            </div>
+            <hr />
+            <div class="info">
+              <p><i class="fa-solid fa-users"></i> DPSS - Department of Plant and Soil Sciences</p>
+              <p><i class="fa-solid fa-users"></i> DAE - Department of Agri-Industries and Economics</p>
+              <p><i class="fa-solid fa-users"></i> Conference room</p>
+              <p><i class="fa-solid fa-users"></i> faculty room 3</p>
+              <p>
+                <i class="fas fa-map-marker-alt"></i> Faculty room 4
+                <span>-</span> Department of animal science (DAS)
+              </p>
+              <p>
+                <i class="fas fa-map-marker-alt"></i> Animal nutrition
+                laboratory
+              </p>
+              <p>
+                <i class="fas fa-map-marker-alt"></i> Soil sience laboratory
+              </p>
+              <p>
+                <i class="fas fa-map-marker-alt"></i> Post harvest laboratory
+              </p>
+              <p><i class="fa-solid fa-users"></i> Accredation office</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+          <div class="card">
+            <div class="header"></div>
+            <div class="title-row">
+              <h4>Second Floor</h4>
+              <img src="img/layer2.png" alt="Info" width="35" height="35" />
+            </div>
+            <hr />
+            <div class="info">
+              <p><i class="fas fa-map-marker-alt"></i> CAA 201</p>
+              <p><i class="fas fa-map-marker-alt"></i> CAA 202</p>
+              <p><i class="fas fa-map-marker-alt"></i> CAA 203</p>
+              <p>
+                <i class="fas fa-map-marker-alt"></i> MS crop science
+                <span>-</span> Faculty 6
+              </p>
+              <p><i class="fas fa-map-marker-alt"></i> CAA 204</p>
+              <p><i class="fas fa-map-marker-alt"></i> CAA 205</p>
+              <p><i class="fas fa-map-marker-alt"></i> CAA 206</p>
+              <p><i class="fas fa-map-marker-alt"></i> CAA 207</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function goBack() {
+        window.location.href = "capstone map.html";
+      }
+    </script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

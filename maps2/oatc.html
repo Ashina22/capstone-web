@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/markers.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <button class="close-btn" onclick="closeTab()">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+    
+    <script>
+      function closeTab() {
+        window.close();
+      }
+    </script>
+    
+
+    <iframe
+      id="panoee-tour-embeded"
+      name="ccis"
+      src="https://tour.panoee.com/iframe/66855ca8ec5013d11d6c2699"
+      frameborder="0"
+      width="100%"
+      height="500px"
+      scrolling="no"
+      allowvr="yes"
+      allow="vr; xr; accelerometer; gyroscope; autoplay;"
+      allowfullscreen="false"
+      webkitallowfullscreen="false"
+      mozallowfullscreen="false"
+      loading="eager"
+    ></iframe>
+
+    <script>
+      var pano_iframe_name = "panoee-tour-embeded";
+      window.addEventListener("devicemotion", function (e) {
+        var iframe = document.getElementById(pano_iframe_name);
+        if (iframe)
+          iframe.contentWindow.postMessage(
+            {
+              type: "devicemotion",
+              deviceMotionEvent: {
+                acceleration: {
+                  x: e.acceleration.x,
+                  y: e.acceleration.y,
+                  z: e.acceleration.z,
+                },
+                accelerationIncludingGravity: {
+                  x: e.accelerationIncludingGravity.x,
+                  y: e.accelerationIncludingGravity.y,
+                  z: e.accelerationIncludingGravity.z,
+                },
+                rotationRate: {
+                  alpha: e.rotationRate.alpha,
+                  beta: e.rotationRate.beta,
+                  gamma: e.rotationRate.gamma,
+                },
+                interval: e.interval,
+                timeStamp: e.timeStamp,
+              },
+            },
+            "*"
+          );
+      });
+    </script>
+
+    <div class="container-fluid mb-5">
+      <div class="col-lg-12">
+        <h1>Organic Agriculture Training Center <span>-</span> OATC</h1>
+        <hr />
+        <p>The interior of the building is not displayed to maintain privacy.</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-4">
+          <div class="card">
+            <div class="header"></div>
+            <div class="title-row">
+              <h4>First Floor</h4>
+              <img src="img/layer1.png" alt="Info" width="35" height="35"> 
+            </div>
+            <hr>
+            <div class="info">
+              <p><i class="fas fa-restroom"></i> Restrooms</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Old Fablab</p>
+                    <p><i class="fa-solid fa-users"></i> Hiraya 101 <span>-</span> CCIS Office</p>
+                    <p><i class="fa-solid fa-users"></i> Hiraya 102 <span>-</span> Conference room</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Hiraya 103 <span>-</span> Auditorium</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Hiraya 107 <span>-</span> Packaging and labeling innovation center</p>
+                    <p><i class="fas fa-map-marker-alt"></i> MINE gears</p>
+                    <p><i class="fa-solid fa-users"></i> Hiraya 105 <span>-</span> CCIS Faculty room</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Hiraya 104 <span>-</span> CL10</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4">
+          <div class="card">
+            <div class="header"></div>
+            <div class="title-row">
+              <h4>Second Floor</h4>
+              <img src="img/layer2.png" alt="Info" width="35" height="35"> 
+            </div>
+            <hr>
+            <div class="info">
+                <p><i class="fas fa-map-marker-alt"></i> 
+                  Hiraya 201 <span>-</span> Center for human computer interaction (CHCI)
+                  <span>-</span> MARVEL
+                  TECHNOLOGIES
+                </p>
+                <p><i class="fa-solid fa-gear"></i> Hiraya 202 <span>-</span> Server room</p>
+                <p><i class="fas fa-map-marker-alt"></i> Hiraya 203 <span>-</span>  CL1</p>
+                <p><i class="fas fa-map-marker-alt"></i> Hiraya 204 <span>-</span>  CL2</p>
+                <p><i class="fas fa-map-marker-alt"></i> Hiraya 205 <span>-</span>  CL3</p>
+                <p><i class="fas fa-box"></i> Utility room</p>
+                <p><i class="fas fa-map-marker-alt"></i> Hiraya 206 <span>-</span>  Navigatu</p>
+                <p><i class="fas fa-map-marker-alt"></i> 
+                  Hiraya 207 <span>-</span>  Information and communication technology center
+                  (ITCT)
+                </p>
+                <p><i class="fa-solid fa-users"></i> Office of the graduate studies</p>
+                <p><i class="fa-solid fa-users"></i> Hiraya 208 <span>-</span> CCIS graduate school office</p>
+                <p><i class="fa-solid fa-users"></i> Hiraya 209 <span>-</span> Virtual learning faculty</p>
+                <p><i class="fas fa-restroom"></i> Restrooms</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4">
+          <div class="card">
+            <div class="header"></div>
+            <div class="title-row">
+              <h4>Third Floor</h4>
+              <img src="img/layer3.png" alt="Info" width="35" height="35"> 
+            </div>
+            <hr>
+            <div class="info">
+                <p><i class="fas fa-map-marker-alt"></i> Hiraya 302 <span>-</span> Multimedia laboratory</p>
+                <p><i class="fas fa-map-marker-alt"></i> Hiraya 307 <span>-</span> MSIT laboratory</p>
+                <p><i class="fas fa-map-marker-alt"></i> Hiraya 304 <span>-</span> Network laboratory</p>
+                <p><i class="fas fa-map-marker-alt"></i> Hiraya 305 <span>-</span> CL4</p>
+                <p><i class="fas fa-map-marker-alt"></i> Hiraya 308 <span>-</span> CL5</p>
+                <p><i class="fas fa-map-marker-alt"></i> Hiraya 303 <span>-</span> CL6</p>
+                <p><i class="fa-solid fa-users"></i> CSU CCIS LSG Office</p>
+                <p><i class="fas fa-map-marker-alt"></i> Hiraya 309 <span>-</span> lecture room 1</li>
+                <p><i class="fas fa-map-marker-alt"></i> Hiraya 310 <span>-</span> lecture room 2</li>
+                <p><i class="fas fa-map-marker-alt"></i> Hiraya 311 <span>-</span> lecture room 3</li>
+                <p><i class="fa-solid fa-gear"></i> Repair room</p>
+                <p><i class="fas fa-restroom"> </i>Restrooms</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+    <script>
+      function goBack() {
+        window.location.href = "capstone map.html";
+      }
+    </script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

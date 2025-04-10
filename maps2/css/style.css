@@ -1,0 +1,257 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa; /* Makes the background separate from the map */
+}
+
+
+#start-input[disabled] {
+  color: #1aaf83; /* Custom text color */
+}
+
+#map {
+  height: 100vh;
+}
+
+
+#directions-container {
+  margin: 10px 0;
+  width: 100%;
+}
+
+#search-input::placeholder,
+#start-input::placeholder,
+#end-input::placeholder{
+  color: #4e4e4e; /* Replace #888 with your desired color */
+  font-weight: 400;
+}
+
+.input-icon-container {
+  position: relative;
+  width: 100%;
+}
+
+.input-icon-container i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #c5c5c5;
+  pointer-events: none;
+}
+
+.input-icon-container input {
+  padding-left: 35px; /* Adjust space for the icon */
+}
+
+#start-input {
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px 10px 0 0; /* Round only the top corners */
+  margin-top: 2%;
+  margin-bottom: 0px !important;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #c9c9c9; /* Outer border */
+  border-bottom-color: #bbbbbb; /* Inner border hidden */
+  background-color: #f3f3f3;
+  color: rgb(44, 44, 44);
+  font-weight: 450;
+}
+
+#end-input {
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 10px 10px; /* Round only the bottom corners */
+  margin-top: 0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #c9c9c9; /* Outer border */
+  border-top-color: transparent; /* Inner border hidden */
+  background-color: #f3f3f3;
+  color: rgb(44, 44, 44);
+  font-weight: 450;
+}
+
+
+#search-input {
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+  margin-top: 2%;
+  border-radius: 20px;
+  background-color:  #eceaea;
+  color: rgb(44, 44, 44);
+  border-color: #dddddd;
+  font-weight: 450;
+  flex: 1; /* Make the input field take up the remaining space */
+  border-radius: 20px 0 0 20px; /* Rounded edge on the left side only */
+  margin: 0; /* Remove extra margin */
+}
+
+
+#start-input:hover,
+#end-input:hover{
+  border-color:#1aaf83;
+  background-color: #f5f3f3;
+}
+
+#search-input:hover{
+  background-color: #f5f3f3;
+}
+
+/* Specific button styles */
+#directions-button,
+#clear-directions-button {
+  padding: 1 3em;
+  margin-top: 1%;
+  font-size: 14px;
+  font-weight: 500;
+  color: #f3f3f3;
+  background-color: #1e555c;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+#clear-directions-button {
+  float: right;
+}
+
+
+#directions-button:hover,
+#clear-directions-button:hover {
+  background-color: #1aaf83;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+
+#directions-button:active,
+#clear-directions-button:active {
+  transform: translateY(-1px);
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container-fluid {
+    padding-left:  15px;
+    padding-right:  15px;
+  }
+
+  #map {
+    height: 80vh; /* Adjust map height on mobile */
+  }
+
+  .form-control,
+  .btn {
+    font-size: 18px; /* Larger font size for mobile */
+    padding: 15px;
+    margin: 10px 0;
+  }
+
+ 
+  #directions-button,
+  #clear-directions-button {
+    padding: 12px 22px;
+    font-size: 18px; /* Increase button size on mobile */
+    width: 45%;
+  }
+}
+
+/* Desktop Styling */
+@media (min-width: 769px) {
+  #search-container,
+  #directions-container {
+    max-width: 400px; /* Limit width on large screens */
+  }
+
+  #search-input,
+  #start-input,
+  #end-input{
+    font-size: 16px;
+  }
+}
+
+
+.autocomplete-dropdown {
+  position: absolute;
+  top: 100%; /* Places dropdown right below the input field */
+  left: 0;
+  right: 0;
+  background-color:  #f3f3f3;
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.autocomplete-dropdown-item {
+  padding: 8px;
+  cursor: pointer;
+  color: #2b2a2a;
+  font-weight: 450;
+}
+
+.autocomplete-dropdown-item:hover {
+  background-color:#d8d6d6;
+}
+
+.form-check-label{
+  color: #353434;
+  font-weight: 400;
+  padding-left: 10px;
+}
+
+.form-check-input {
+  border: 1px solid #666666; /* Change the border color */
+  width: 20px; /* Adjust size if needed */
+  height: 20px;
+  border-radius: 50% !important; /* Adjust the value for rounded corners */
+}
+
+/* Floating effect for the right-side container */
+.col-12.col-lg-3 {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adds a shadow to create a floating effect */
+  padding: 20px; /* Adds some space inside the container */
+  position: relative; /* Ensures proper stacking */
+  z-index: 10; /* Ensures it stays above the map */
+}
+
+#search-button {
+  background-color:  #1e555c; /* Keep your current button background color */
+  color: #f5f5f5;
+  border-radius: 0 20px 20px 0; /* Rounded edge on the right side only */
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding-left: 20px; /* adjust any time */
+  padding-right: 20px;
+ 
+}
+
+#search-button:hover {
+  background-color: #1aaf83;
+  color: #fff;
+}
+
+#search-input {
+  border-radius: 20px 0 0 20px; /* Rounded edge on the left side only */
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input-group-append {
+  margin-left: -1px; /* Prevents overlap between input and button borders */
+}
+
+
