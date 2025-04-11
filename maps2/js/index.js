@@ -375,6 +375,15 @@ function searchLocation() {
       "hostel building": { lat: 8.958735140337026,  lng: 125.59833326532635, info: "Hostel Building", image: "img/hostel.jpg", link: "hostel.html" },
       "csu personnel multipurpose cooperative canteen": { lat: 8.955626166710692, lng: 125.59704251248058, info: "CSU Personnel multipurpose cooperative canteen", image: "", link: "coo-canteen.html" },
       "clinic": { lat: 8.95865014355704,  lng: 125.59801501452652, info: "Clinic", image: "img/clinic.jpg", link: "hostel.html" },
+      "carabao center":{
+      lat: 8.949836599646707,
+      lng: 125.59798456212924,
+       info: "Carabao Center",
+       image: "img/csu.jpg",
+       icon: "img/carabao.png", // Specific icon for this location
+       link: "carabao.html",
+       description: "Click image to view contents",
+     },
     };
 
     const matchedLocations = Object.keys(searchLocations).filter(key => key.includes(searchInput));
@@ -510,6 +519,15 @@ async function getDirections() {
       "hostel building": { lat: 8.958735140337026,  lng: 125.59833326532635, info: "Hostel Building", image: "img/hostel.jpg", link: "hostel.html" },
       "clinic": { lat: 8.95865014355704,  lng: 125.59801501452652, info: "Clinic", image: "img/clinic.jpg", link: "hostel.html" },
       "csu personnel multipurpose cooperative canteen": { lat: 8.955626166710692, lng: 125.59704251248058, info: "CSU Personnel multipurpose cooperative canteen", image: "", link: "coo-canteen.html" },
+      "carabao center":{
+      lat: 8.949836599646707,
+      lng: 125.59798456212924,
+       info: "Carabao Center",
+       image: "img/csu.jpg",
+       icon: "img/carabao.png", // Specific icon for this location
+       link: "carabao.html",
+       description: "Click image to view contents",
+     },
   };
 
   try {
@@ -733,6 +751,7 @@ const predefinedLocations = [
   { name: "Registrar"},
   { name: "OAS"},
   { name: "CSU Villares Building"},
+  { name: "Carabao Center" },
 ];
 
 // Function to apply autocomplete functionality to an input field
