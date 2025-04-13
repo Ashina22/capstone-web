@@ -51,7 +51,7 @@ p{
 .info i {
   margin-right: 10px; /* Space between icon and text */
   color: #333333; /* Optional: Adjust icon color */
-  font-size: 16px; /* Adjust icon size */
+  font-size: 14px; /* Adjust icon size */
 }
 
 h4 {
@@ -109,4 +109,6 @@ h2{
 
 img {
   margin-left: 4%;
+  height: 25px;
+  width: 25px;
 }
